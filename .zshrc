@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+export GPG_TTY=$(tty)
 export ZSH="/home/collin/.oh-my-zsh"
 export PATH=$PATH:~/.local/bin
 export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
