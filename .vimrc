@@ -61,7 +61,7 @@ let g:asyncrun_open = 15
 
 " ale
 let g:ale_fixers = {'python': ['remove_trailing_lines', 'trim_whitespace', 'autopep8', 'isort']}
-let b:ale_linters = {'python': ['pylint', 'flake8']}
+let b:ale_linters = {'python': ['pylint', 'flake8', 'pyls']}
 let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1

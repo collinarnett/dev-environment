@@ -1,0 +1,7 @@
+zsh-users/zsh-syntax-highlighting
+chrissicool/zsh-256color
+desyncr/auto-ls
+Tarrasch/zsh-autoenv
+zsh-users/zsh-autosuggestions
+Lokaltog/powerline
+bhilburn/powerlevel9k
