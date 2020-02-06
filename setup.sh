@@ -10,4 +10,5 @@ chsh -s $(which zsh)
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin
 sudo apt install python3-pip
+pip3 installl pylint pyls flake8
 source .zshrc

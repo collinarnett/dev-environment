@@ -2,7 +2,7 @@ set nocompatible              " required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " alternatively, pass a path where Vundle should install plugins
@@ -28,9 +28,10 @@ syntax on
 
 set splitbelow
 set splitright
-set nu " Show line numbers
+set number  " Show line numbers
 set clipboard^=unnamed,unnamedplus " Universal clipboard
 set encoding=utf-8
+set tabstop=4
 
 " ----------Plugins----------
 " nerdtree
@@ -60,14 +61,21 @@ let g:asyncrun_open = 15
 
 
 " ale
-let g:ale_fixers = {'python': ['remove_trailing_lines', 'trim_whitespace', 'autopep8', 'isort']}
-let b:ale_linters = {'python': ['pylint', 'flake8', 'pyls']}
+let g:ale_fixers = {
+\    '*': ['remove_trailing_lines', 'trim_whitespace'],
+\    'python': ['remove_trailing_lines', 'trim_whitespace', 'autopep8', 'isort'],
+\    'markdown': ['prettier'],
+\}
+let b:ale_linters = {
+\    'python': ['pylint', 'flake8', 'pyls'],
+\    'markdown': ['mdl'],
+\}
 let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
 
 
-" airline-themes 
+" airline-themes
 let g:airline_theme='dracula'
 
 Plugin 'tpope/vim-surround'
@@ -81,7 +89,6 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'w0rp/ale'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'skywind3000/asyncrun.vim'
 Plugin 'Yggdroot/indentLine'
 " ...
