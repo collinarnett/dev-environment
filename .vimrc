@@ -74,16 +74,11 @@ let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
 
-
-" airline-themes
-let g:airline_theme='dracula'
-
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'w0rp/ale'
@@ -95,4 +90,4 @@ Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+filetype plugin indent on    " requiredi
