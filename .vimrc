@@ -65,10 +65,12 @@ let g:ale_fixers = {
 \    '*': ['remove_trailing_lines', 'trim_whitespace'],
 \    'python': ['remove_trailing_lines', 'trim_whitespace', 'autopep8', 'isort'],
 \    'markdown': ['prettier'],
+\    'javascript': ['eslint'],
 \}
 let b:ale_linters = {
 \    'python': ['pylint', 'flake8', 'pyls'],
 \    'markdown': ['mdl'],
+\    'javascript': ['eslint']
 \}
 let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
