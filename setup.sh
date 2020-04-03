@@ -27,7 +27,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     chsh -s $(which zsh)
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin
-    pip3 install pylint pyls flake8
+    pip3 install pylint pyls flake8 vint
 fi
 
 npm install eslint
