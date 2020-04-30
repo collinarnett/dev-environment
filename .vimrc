@@ -16,12 +16,15 @@ Plugin 'gmarik/Vundle.vim'
 
 " ----------Vim Config----------
 
+" Language specific variables
+
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
+autocmd FileType python setlocal tabstop=4 shiftwidth=4
+autocmd FileType json setlocal tabstop=2 shiftwidth=2
+
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
-
-" Enable folding with the spacebar
-nnoremap <space> za
 
 let python_highlight_all=1
 syntax on
@@ -31,34 +34,11 @@ set splitright
 set number  " Show line numbers
 set clipboard^=unnamed,unnamedplus " Universal clipboard
 set encoding=utf-8
-set tabstop=4
 
 " ----------Plugins----------
 " nerdtree
 map <C-o> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-
-
-" asyncrun
-nnoremap <F5> :call <SID>compile_and_run()<CR>
-
-function! s:compile_and_run()
-    exec 'w'
-    if &filetype == 'c'
-        exec "AsyncRun! gcc % -o %<; time ./%<"
-    elseif &filetype == 'cpp'
-       exec "AsyncRun! g++ -std=c++11 % -o %<; time ./%<"
-    elseif &filetype == 'java'
-       exec "AsyncRun! javac %; time java %<"
-    elseif &filetype == 'sh'
-       exec "AsyncRun! time bash %"
-    elseif &filetype == 'python'
-       exec "AsyncRun! time python %"
-    endif
-endfunction
-
-let g:asyncrun_open = 15
-
 
 " ale
 let g:ale_fixers = {
@@ -74,7 +54,7 @@ let b:ale_linters = {
 \}
 let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
-let g:ale_completion_enabled = 1
+let g:ale_lint_on_text_changed = 1
 
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
@@ -92,4 +72,5 @@ Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " requiredi
+filetype off
+filetype plugin indent on    " required
