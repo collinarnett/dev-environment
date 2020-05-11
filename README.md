@@ -1,5 +1,7 @@
 # Dev Enviornment
 
+![fish](https://i.imgur.com/sXNYZmi.png)
+
 This is the configuration I use for setting up my dev machines. The main tools in my arsenal are:
 
 * Vim
