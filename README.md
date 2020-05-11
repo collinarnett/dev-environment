@@ -3,12 +3,11 @@
 This is the configuration I use for setting up my dev machines. The main tools in my arsenal are:
 
 * Vim
-* terminator (linux) / iterm2 (osx)
-* zsh
+* terminator (linux)
+* fish
 * python
-* javascript
 
-running `setup.sh` will setup the the entire dev enviornment. Tested on Ubuntu Server 18.04.
+running `setup.sh` will setup the the entire dev enviornment. Tested on Ubuntu Desktop 20.04.
 
 ## Running
 
@@ -16,3 +15,5 @@ running `setup.sh` will setup the the entire dev enviornment. Tested on Ubuntu S
 chmod +x setup.sh
 ./setup.sh
 ```
+
+After running the setup script setup GPG and ssh. 

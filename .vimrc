@@ -21,6 +21,8 @@ Plugin 'gmarik/Vundle.vim'
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
 autocmd FileType python setlocal tabstop=4 shiftwidth=4
 autocmd FileType json setlocal tabstop=2 shiftwidth=2
+autocmd FileType fish setlocal tabstop=2 shiftwidth=2
+autocmd FileType bash setlocal tabstop=2 shiftwidth=2
 
 " Enable folding
 set foldmethod=indent
